@@ -36,4 +36,4 @@ def insertShiftArray(array, value):
 
 ## Whiteboard
 Inline-style: 
-![alt text](../../assets/array_shift.jpg "Whiteboard")
+![alt text](./../../assets/array_shift.jpg "Whiteboard")
