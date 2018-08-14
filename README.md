@@ -2,5 +2,5 @@
 - code-challenges
 
 ## Challenges
-[reverse_array](./challenges/reverse_array).
-[array_shift](./challenges/array_shift).
+1. [reverse_array](./challenges/reverse_array)
+2. [array_shift](./challenges/array_shift)
