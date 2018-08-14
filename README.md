@@ -1,5 +1,6 @@
 # py401_data-structures-and-algorithms
 - code-challenges
 
-## Challenge 01
-- array_reverse
+## Challenges
+[reverse_array](./challenges/reverse_array)
+[array_shift](./challenges/array_shift)
