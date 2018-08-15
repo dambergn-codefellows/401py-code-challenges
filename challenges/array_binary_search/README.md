@@ -23,16 +23,34 @@
 ## Pseudo Code
 ```
 function(array, value)
-  first half of array = array length / 2 -1
-  second half of array = array length - first half of array
-  return new array = first half of array + value + second half of array
+  Length of array divided by 2 = midpoint
+  set for loop
+  check if input is <, >, or = to midpoint
+  if input = midpoint return index
+  if input > midpoint + (midpoint / 2)
+  out of loop return -1
 ```
 
 ## Code
 ```
-def insertShiftArray(array, value):
-  half = len(array)//2
-  return array[:half] + [value] + array[half:]
+def binary_search(array, value):
+  '''
+  Use a binary search method to look for a values position in a sorted list.
+  '''
+  left = 0
+  right = len(array) - 1
+  while(left <= right):
+    mid = (left + right) // 2
+    if array[mid] is value:
+      print(mid)
+      return mid
+    elif value < array[mid]:
+      right = mid - 1
+    elif value > array[mid]:
+      left = mid + 1
+
+  print(-1)
+  return -1
 ```
 
 ## Big 'O'
