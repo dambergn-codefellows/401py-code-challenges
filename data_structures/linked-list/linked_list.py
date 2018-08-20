@@ -26,14 +26,31 @@ class LinkedList(object):
     self.head = self
     # pass
 
-  def insert(self, val: Any) -> Any:
-    new_node = Node(val, self.head)
-    self.head = new_node
+  # def insert(self, val: Any) -> Any:
+  #   new_node = Node(val, self.head)
+  #   self.head = new_node
+  #   self._length += 1
+
+  def insert(self, val):
+    '''
+    '''
+    # node = Node(self, val):
+    # node._next = self.head
+    # self.head = node
+    self.head = Node(val, self.head)
     self._length += 1
+    return self.head.val
+    
 
   # def includes(self, val: str, data: int) -> bool:
   def includes(self, val: Any) -> bool:
-    pass
+    '''
+    '''
+    current = self.head
+    while current is not None:
+      if current.val == val:
+        return True
+      current = current._next
 
 myList = LinkedList()
 def create_list():
@@ -45,3 +62,5 @@ def create_list():
 
 create_list()
 print(str(myList))
+myList.insert(10)
+print('Head Value: ' + str(myList.head.val))
