@@ -34,9 +34,6 @@ class LinkedList(object):
   def insert(self, val):
     '''
     '''
-    # node = Node(self, val):
-    # node._next = self.head
-    # self.head = node
     self.head = Node(val, self.head)
     self._length += 1
     return self.head.val
