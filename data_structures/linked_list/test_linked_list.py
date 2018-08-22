@@ -6,12 +6,25 @@ def empty_list():
   return LinkedList()
 
 @pytest.fixture
+def empty_list_two():
+  return LinkedList()
+
+@pytest.fixture
 def small_list():
   ll = LinkedList()
   ll.insert(1)
   ll.insert(2)
   ll.insert(3)
   ll.insert(4)
+  return ll
+
+@pytest.fixture
+def small_list_two():
+  ll = LinkedList()
+  ll.insert(a)
+  ll.insert(b)
+  ll.insert(c)
+  ll.insert(d)
   return ll
 
 def test_linked_list_exists():
