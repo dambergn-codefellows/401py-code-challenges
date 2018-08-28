@@ -7,4 +7,5 @@
 3. [array_binary_search](./challenges/array_binary_search)
 4. [ll_kth_from_end](./challenges/ll_kth_from_end)
 5. [ll_merge](./challenges/ll_merge)
+6. [queue_with_stacks](./challenges/queue_with_stacks)
 
