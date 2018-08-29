@@ -77,7 +77,8 @@ class LinkedList(object):
 
 
             
-# myList = LinkedList()
+myList = LinkedList()
+myList2 = LinkedList()
 # def create_list():
 #   myList.insert(1)
 #   myList.insert(2)
@@ -86,8 +87,13 @@ class LinkedList(object):
 #   myList.insert(8)
 
 # create_list()
+
 # print(str(myList))
-# myList.insert(10)
+# myList.append(10)
 # print('Head Value: ' + str(myList.head.val))
 # print('Includes 4: ' + str(myList.includes(4)))
 # print('Does not include 7: ' + str(myList.includes(7)))
+myList2.append(2)
+print(str(myList2))
+myList2.append(3)
+print(str(myList2))
