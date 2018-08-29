@@ -1,10 +1,13 @@
-from .node import Node
+from node import Node
 from typing import Any #typing annotation
 
 class LinkedList(object):
-    def __init__(self, iterable=None):
-        self.head = iterable
+    def __init__(self, iterable=[]):
+        self.head = None
         self._length = int('0')
+        
+        for item in iterable:
+            self.insert(item)
 
     def __str__(self):
         return f'Head: {self.head} | Length: {self._length}'
@@ -17,13 +20,13 @@ class LinkedList(object):
         '''
         return self._length
 
-    def __iter__(self):
-        if self.head:
-            self._current = self.head
-        return self
+    # def __iter__(self):
+    #     if self.head:
+    #         self._current = self.head
+    #     return self
 
-    def __next__(self):
-        self.head = self
+    # def __next__(self):
+    #     self.head = self
         # pass
 
         # def insert(self, val: Any) -> Any:
@@ -34,46 +37,63 @@ class LinkedList(object):
     def insert(self, val):
         '''
         '''
-        self.head = Node(val, self.head)
-        self._length += 1
-        return self.head.val
+        node = Node(val) # Create new node in object
+        node._next = self.head # Assigns next value to previous node.
+        self.head = node # Assign head to new node
+        # self.head = Node(val, self.head)
+
+        self._length += 1 # tracks the lenght
+        return self.head.val # returns newly created node.
     
 
     # def includes(self, val: str, data: int) -> bool:
     def includes(self, val: Any) -> bool:
         '''
         '''
-        current = self.head
-        while current is not None:
-        if current.val == val:
-            return True
-        current = current._next
+        current = self.head # Current starts as head
+        while current is not None: # none is end of the list
+            if current.val == val: # 
+                return True
+            current = current._next
+        return False
 
-        def ll_merge(self, ll_two):
-            try:
-                ll_one_current = self.head
-                ll_two_current = ll_two.head
+    def append(self, val: Any) -> bool:
+        '''
+        '''
+        if self.head is None:
+            node = Node(val)
+            self.head = node
+            self._length += 1
+        else:
+            current = self.head
+            while current is not None:
+                if current._next is None:
+                    node = Node(val)
+                    current._next = node
+                    self._length += 1
+                    break
+                current =  current._next
 
-                while ll_one_current is not None and ll_two_current is not None:
-                    ll_one_next = ll_one_current._next
-                    ll_two_next = ll_two_current._next
 
-                    ll_one_current._next, ll_two_current._next = ll_two_next, ll_one_next
-                    ll_one_current = ll_one_next
-                ll_two.head = ll_two_current
 
-            except None:
-                'Not valid input'
-
+            
 myList = LinkedList()
-def create_list():
-  myList.insert(1)
-  myList.insert(2)
-  myList.insert(4)
-  myList.insert(6)
-  myList.insert(8)
+myList2 = LinkedList()
+# def create_list():
+#   myList.insert(1)
+#   myList.insert(2)
+#   myList.insert(4)
+#   myList.insert(6)
+#   myList.insert(8)
 
-create_list()
-print(str(myList))
-myList.insert(10)
-print('Head Value: ' + str(myList.head.val))
+# create_list()
+
+# print(str(myList))
+# myList.append(10)
+# print('Head Value: ' + str(myList.head.val))
+# print('Includes 4: ' + str(myList.includes(4)))
+# print('Does not include 7: ' + str(myList.includes(7)))
+myList2.append(2)
+print(str(myList2))
+myList2.append(3)
+print(str(myList2))
