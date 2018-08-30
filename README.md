@@ -8,4 +8,5 @@
 4. [ll_kth_from_end](./challenges/ll_kth_from_end)
 5. [ll_merge](./challenges/ll_merge)
 6. [queue_with_stacks](./challenges/queue_with_stacks)
+7. [multi_bracket_validation](./challenges/multi_bracket_validation)
 

@@ -39,6 +39,5 @@
  - Time: O(N)
 
 ## Whiteboard
-- Panoramic photo looked ok on my phone, I didn't notice how blurry the right side of the photo was till I saw it on my computer.
 Inline-style: 
 ![alt text](./../../assets/multi_bracket_validation.jpg "Whiteboard")
