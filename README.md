@@ -10,3 +10,4 @@
 6. [queue_with_stacks](./challenges/queue_with_stacks)
 7. [multi_bracket_validation](./challenges/multi_bracket_validation)
 8. [breadth_first_traversal](./challenges/breadth_first_traversal)
+9. [find-maximum-value-binary-tree](./challenges/find-maximum-value-binary-tree)
