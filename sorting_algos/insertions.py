@@ -13,3 +13,4 @@ def insertion_sort(unsorted):
     return unsorted
 
 print(insertion_sort([3,7,4,1]))
+# result = [1,3,4,7]
