@@ -17,4 +17,4 @@ Write a function called find-maximum-value which takes binary tree as its only i
 
 ## Whiteboard
 Inline-style: 
-![alt text](./../../assets/breadth_first_traversal.jpg "Whiteboard")
+![alt text](./../../assets/find-maximum-value-binary-tree.jpg "Whiteboard")
